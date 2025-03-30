@@ -1,34 +1,47 @@
-import { signInWithGoogle, signInWithGitHub, signOut } from "../utils/auth";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { supabase } from "../utils/supabaseClient";
-import Link from "next/link"; // Thêm Link để chuyển sang trang đăng ký
+import { useRouter } from "next/router";
 
 export default function LoginPage() {
-  const [user, setUser] = useState(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const router = useRouter();
 
-  useEffect(() => {
-    async function fetchUser() {
-      const { data: { user } } = await supabase.auth.getUser();
-      setUser(user);
+  // Xử lý đăng nhập bằng email
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+
+    if (error) {
+      alert(error.message);
+    } else {
+      router.push("/");
     }
-    fetchUser();
-  }, []);
+  };
+
+  // Xử lý đăng nhập bằng Google / GitHub
+  const handleOAuthLogin = async (provider) => {
+    const { error } = await supabase.auth.signInWithOAuth({ provider });
+
+    if (error) alert(error.message);
+  };
 
   return (
     <div style={{ padding: "20px" }}>
       <h1>Đăng nhập</h1>
-      {user ? (
-        <>
-          <p>Xin chào, {user.email}</p>
-          <button onClick={signOut}>Đăng xuất</button>
-        </>
-      ) : (
-        <>
-          <button onClick={signInWithGoogle}>Đăng nhập bằng Google</button>
-          <button onClick={signInWithGitHub}>Đăng nhập bằng GitHub</button>
-          <p>Chưa có tài khoản? <Link href="/signup">Đăng ký ngay</Link></p>
-        </>
-      )}
+
+      <form onSubmit={handleLogin}>
+        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input type="password" placeholder="Mật khẩu" value={password} onChange={(e) => setPassword(e.target.value)} required />
+        <button type="submit">Đăng nhập</button>
+      </form>
+
+      <hr />
+
+      <button onClick={() => handleOAuthLogin("google")}>Đăng nhập với Google</button>
+      <button onClick={() => handleOAuthLogin("github")}>Đăng nhập với GitHub</button>
+
+      <p>Chưa có tài khoản? <a href="/signup">Đăng ký</a></p>
     </div>
   );
 }
