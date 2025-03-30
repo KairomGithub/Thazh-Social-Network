@@ -13,7 +13,6 @@ export default function CreatePost() {
   const handleUpload = async (file, folder) => {
     if (!file) return "";
 
-    // Giới hạn dung lượng 15MB
     if (file.size > 15 * 1024 * 1024) {
       alert("File quá lớn! Giới hạn 15MB.");
       return "";
@@ -40,18 +39,16 @@ export default function CreatePost() {
     e.preventDefault();
     setLoading(true);
 
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) {
+    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    if (authError || !user) {
       alert("Bạn cần đăng nhập để đăng bài!");
       setLoading(false);
       return;
     }
 
-    // Upload ảnh và video (nếu có)
     const imageUrl = await handleUpload(image, "images");
     const videoUrl = await handleUpload(video, "videos");
 
-    // Thêm vào database
     const { error } = await supabase
       .from("posts")
       .insert([{ user_id: user.id, content, image: imageUrl, video: videoUrl }]);
