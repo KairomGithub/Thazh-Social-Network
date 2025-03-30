@@ -1,0 +1,12 @@
+# File chứa biến môi trường
+.env
+.env.local
+
+# Thư mục chứa module đã cài (nặng)
+node_modules/
+
+# File build của Next.js
+.next
+
+# File lock
+package-lock.json
