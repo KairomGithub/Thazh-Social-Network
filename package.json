@@ -1,0 +1,24 @@
+{
+  "name": "thazh-social",
+  "version": "1.0.0",
+  "description": "Mạng xã hội mini Thazh Social dùng Next.js + Supabase",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "eslint": "latest"
+  },
+  "keywords": ["social", "nextjs", "supabase"],
+  "author": "Thazh",
+  "license": "MIT"
+}
