@@ -1,4 +1,4 @@
-Thazh Social Network
+**Thazh Social Network
 
 Dự án này là một mạng xã hội mini sử dụng Next.js và Supabase để cung cấp các tính năng như đăng ký, đăng nhập, đăng bài, theo dõi, like, và bình luận.
 
@@ -7,11 +7,16 @@ Dự án này là một mạng xã hội mini sử dụng Next.js và Supabase �
   *Node.js >= 16 
   *Tài khoản Supabase 
   *Tài khoản Vercel (nếu deploy lên Vercel) 
- #Clone repository 
-   git clone https://github.com/KairomGithub/Thazh-Social-Network.git 
-   cd mini-social-network 
- #Cài đặt dependencies 
-   npm install 
+ #Clone repository
+
+   git clone https://github.com/KairomGithub/Thazh-Social-Network.git
+
+   cd thazh-social-network
+   
+ #Cài đặt dependencies
+
+   npm install
+   
  #Cấu hình môi trường 
 
    Tạo file .env.local ở thư mục gốc và thêm các biến môi trường:
@@ -25,7 +30,10 @@ Dự án này là một mạng xã hội mini sử dụng Next.js và Supabase �
  #Mở trình duyệt và truy cập: http://localhost:3000
 
 4. Deploy lên Vercel 
-Bước 1: Đăng nhập Vercel npm install -g vercel vercel login 
+Bước 1: Đăng nhập Vercel
+
+npm install -g vercel vercel login 
+
 Bước 2: Deploy dự án vercel 
 
 Làm theo hướng dẫn trên màn hình để hoàn tất quá trình deploy.
