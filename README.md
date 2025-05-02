@@ -5,8 +5,12 @@ Dự án này là một mạng xã hội mini sử dụng Next.js và Supabase �
 ## I. Cài đặt và chạy dự án 
 ###  1. Yêu cầu 
   *Node.js >= 16 
-  *Tài khoản Supabase 
-  *Tài khoản Vercel (nếu deploy lên Vercel) ###  2. Clone repository
+
+  *Tài khoản Supabase
+
+  *Tài khoản Vercel (nếu deploy lên Vercel)
+
+###  2. Clone repository
  
 ``git clone https://github.com/KairomGithub/Thazh-Social-Network.git``
 
@@ -25,7 +29,8 @@ Dự án này là một mạng xã hội mini sử dụng Next.js và Supabase �
 
 ###  5. Cấu trúc thư mục 📁 
 
-``mini-social-network 
+
+mini-social-network 
 │── 📁 pages # Chứa các trang chính 
 │ 
 ├── 📄 index.js # Trang chủ hiển thị bài viết 
@@ -45,7 +50,8 @@ Dự án này là một mạng xã hội mini sử dụng Next.js và Supabase �
 │── 📄 .gitignore # Danh sách file không commit 
 │── 📄 package.json # Danh sách dependencies 
 │── 📄 next.config.js # Cấu hình Next.js │── 📄 vercel.json # Cấu hình deploy Vercel 
-│── 📄 README.md # Tài liệu hướng dẫn``
+│── 📄 README.md # Tài liệu hướng dẫn
+
 
 ###  6. Chạy dự án 
 
@@ -58,9 +64,12 @@ Dự án này là một mạng xã hội mini sử dụng Next.js và Supabase �
 ``http://localhost:3000``
 
 ###  7. Deploy lên Vercel 
- - Bước 1: Đăng nhập Vercel
+
+- Bước 1: Đăng nhập Vercel
+
 
 ``npm install -g vercel vercel login``
+
 
 - Bước 2: Deploy dự án vercel 
 
@@ -70,7 +79,8 @@ Làm theo hướng dẫn trên màn hình để hoàn tất quá trình deploy.
  [x] Đăng ký & đăng nhập (Email & mật khẩu, Google, GitHub) 
  [x] Đăng bài (hỗ trợ text, ảnh, video tối đa 15MB) 
  [x] Trang cá nhân (hiển thị thông tin user, bài đăng, người theo dõi)
- [x] Theo dõi & bỏ theo dõi [x] Like & Comment bài viết 
+ [x] Theo dõi & bỏ theo dõi 
+ [x] Like & Comment bài viết 
 
 ###  9. Các file không nên commit 
 
