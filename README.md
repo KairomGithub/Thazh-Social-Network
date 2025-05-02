@@ -1,17 +1,15 @@
-**Thazh Social Network
+#Thazh Social Network
 
 Dự án này là một mạng xã hội mini sử dụng Next.js và Supabase để cung cấp các tính năng như đăng ký, đăng nhập, đăng bài, theo dõi, like, và bình luận.
 
-1. Cài đặt và chạy dự án 
- #Yêu cầu 
+## I. Cài đặt và chạy dự án 
+###  1. Yêu cầu 
   *Node.js >= 16 
   *Tài khoản Supabase 
-  *Tài khoản Vercel (nếu deploy lên Vercel) 
- #Clone repository
+  *Tài khoản Vercel (nếu deploy lên Vercel) ###  2. Clone repository
+ ``git clone https://github.com/KairomGithub/Thazh-Social-Network.git``
 
-   git clone https://github.com/KairomGithub/Thazh-Social-Network.git
-
-   cd thazh-social-network
+   ``cd thazh-social-network``
    
  #Cài đặt dependencies
 
