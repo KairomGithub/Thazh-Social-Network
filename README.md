@@ -30,26 +30,48 @@ Dự án này là một mạng xã hội mini sử dụng Next.js và Supabase �
 ###  5. Cấu trúc thư mục 📁 
 
 
-mini-social-network 
-│── 📁 pages # Chứa các trang chính 
+mini-social-network
+ 
+│── 📁 pages # Chứa các trang chính
+
 │ 
 ├── 📄 index.js # Trang chủ hiển thị bài viết 
+
 │ 
+
 ├── 📄 login.js # Trang đăng nhập 
+
 │ 
+
 ├── 📄 signup.js # Trang đăng ký 
+
 │ 
+
 ├── 📄 profile.js # Trang cá nhân 
+
 │ 
+
 ├── 📄 post.js # Trang đăng bài 
+
 │── 📁 components # Chứa các component tái sử dụng 
-│── 📁 utils # Chứa các helper functions │ 
-├── 📄 auth.js # Xử lý xác thực 
+
+│── 📁 utils # Chứa các helper functions
+ 
 │ 
+├── 📄 auth.js # Xử lý xác thực 
+
+│ 
+
 ├── 📄 supabaseClient.js # Kết nối với Supabase 
+
 │── 📄 .gitignore # Danh sách file không commit 
+
 │── 📄 package.json # Danh sách dependencies 
-│── 📄 next.config.js # Cấu hình Next.js │── 📄 vercel.json # Cấu hình deploy Vercel 
+
+│── 📄 next.config.js # Cấu hình Next.js 
+
+│── 📄 vercel.json # Cấu hình deploy Vercel 
+
 │── 📄 README.md # Tài liệu hướng dẫn
 
 
